@@ -1,0 +1,20 @@
+{
+  "name": "master",
+  "version": "1.0.0",
+  "description": "node.js 进程管理, cluster, fork ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "node ./index.js",
+    "f": "node ./fork/index.js",
+    "c": "node ./cluster/index.js"
+  },
+  "keywords": [
+    "node.js",
+    "进程管理",
+    "cluster",
+    "fork"
+  ],
+  "author": "queenxzb@163.com",
+  "license": " MIT"
+}
