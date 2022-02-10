@@ -29,6 +29,7 @@ if (cluster.isMaster) {
   const server = http.createServer();
   server.on("request", (req, res) => {
     if (req.url === "/compute") {
+      console.log('8000端口')
       const sum = computation();
       return res.end("hello word" + sum);
     } else {

@@ -2,6 +2,7 @@ const http = require("http");
 const fork = require("child_process").fork;
 const server = http.createServer((req, res) => {
   if (req.url == "/compute") {
+    console.log('5000端口')
     const compute = fork("./fork/fork.js");
     compute.send("开启一个新的子进程");
     // 当一个子进程使用 process.send() 发送消息时会触发 'message' 事件
