@@ -13,7 +13,9 @@ const computation = () => {
 const server = http.createServer();
 server.on("request", (req, res) => {
   if (req.url === "/compute") {
-    console.log('3000端口')
+    const ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || req.socket.remoteAddress
+    console.log("请求ip" + ip);
+    console.log("3000端口");
     const sum = computation();
     return res.end("hello word" + sum);
   } else {
